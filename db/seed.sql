@@ -1,6 +1,8 @@
-DROP TABLE IF EXISTS users;
+-- CHANGED TO USERS2 to keep existing users from a lecture code still studying
 
-CREATE TABLE users
+DROP TABLE IF EXISTS users2;
+
+CREATE TABLE users2
 (
   id SERIAL PRIMARY KEY,
   is_admin BOOLEAN default false,
@@ -8,7 +10,7 @@ CREATE TABLE users
   hash text
 );
 
-INSERT INTO users
+INSERT INTO users2
 (is_admin, username, hash)
 VALUES
 (true, 'Trogdor', '$2a$10$wZUxoi7vsBOeHK3zhiY4H.Nc5WvuyukqmsGjat9XMGl40w3/RhdiW'),
